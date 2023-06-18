@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>问卷软云</title>
+  </head>
+  <body>
+
+
+   <script>	
+     //登录注册功能
+        
+     let user = null
+     let pass = null
+     
+     caidan()
+    //菜单页
+      function caidan(){
+           let is = prompt("欢迎使用问卷软云 （测试版）！\n1. 登录\n2. 客人登录\n3. 教师登录")
+           if(is == 1){
+              denglu()
+           }
+           if(is == 2){
+              guest()
+           }
+           if(is == 3){
+               js()
+           }
+          
+          
+      }
+           
+      
+   
+    //登录功能
+     
+      function denglu(){
+        let inUser = prompt("请输入账号")
+        let inPass = prompt("请输入密码")
+      
+        if(inUser=="admin" && inPass=="@ljcadmin"){
+           
+           window.location.href='admin.html';
+        }
+    
+        else{
+         caidan()
+        }
+      }
+      function guest(){
+        window.location.href="guest.html";
+      }
+      function js(){
+        let inTeach = prompt("请输入教师职位")
+        let inid = prompt("请输入教师进入证号")
+        if(inTeach=="金鹏课题研究社团" && inid=="T236401"){
+       
+          window.location.href="js.html ";
+        }
+       else{
+           caidan()
+        }
+      }
+
+  
+   </script>
+
+  </body>
+
+
+
+
+
+</html>
